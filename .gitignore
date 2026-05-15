@@ -141,3 +141,24 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Claude Code operator artifacts (local-only, never pushed)
+.claude/
+CLAUDE.md
+*.claude.md
+
+# Editor / IDE / OS noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Secrets — belt-and-suspenders alongside the .env block above
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+.secrets/
