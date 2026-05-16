@@ -1,6 +1,6 @@
 # Local Development
 
-How to run Shuffleify on your own machine.
+How to run shuffleify on your own machine.
 
 ## Prerequisites
 
