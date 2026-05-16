@@ -18,7 +18,9 @@ export default async function Home() {
           />
         </h1>
         <p className="max-w-md text-lg text-zinc-400">
-          Spotify sucks — everyone knows it. See what a real shuffle would look like.
+          Spotify sucks — everyone knows it.
+          <br />
+          See what a real shuffle would look like.
         </p>
 
         {isLoggedIn ? (
