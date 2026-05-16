@@ -11,7 +11,7 @@ export default async function Home() {
           {/* eslint-disable-next-line @next/next/no-img-element -- bypasses next/image basePath quirks in dev. */}
           <img
             src="/shuffleify/shuffleify-hero.webp"
-            alt="Shuffleify"
+            alt="shuffleify"
             width={1024}
             height={1024}
             className="h-64 w-64 sm:h-80 sm:w-80"

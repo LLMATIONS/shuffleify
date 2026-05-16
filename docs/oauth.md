@@ -1,6 +1,6 @@
 # OAuth Design
 
-How Shuffleify authenticates with Spotify, in detail. The design covers the auth surface only — login, callback, logout, session, headers.
+How shuffleify authenticates with Spotify, in detail. The design covers the auth surface only — login, callback, logout, session, headers.
 
 ## Summary
 
@@ -72,7 +72,7 @@ The short-lived cookie that carries `state` + `code_verifier` between the redire
 
 | Property | Value | Why |
 |---|---|---|
-| Name | `__Secure-shuffleify-oauth` (prod) / `shuffleify-oauth` (dev) | `__Secure-` prefix forces `Secure` flag in prod. We can't use `__Host-` because Shuffleify lives at a subpath (`/shuffleify`) — `__Host-` requires `Path=/`. See "Subdomain migration note" below. |
+| Name | `__Secure-shuffleify-oauth` (prod) / `shuffleify-oauth` (dev) | `__Secure-` prefix forces `Secure` flag in prod. We can't use `__Host-` because shuffleify lives at a subpath (`/shuffleify`) — `__Host-` requires `Path=/`. See "Subdomain migration note" below. |
 | Path | `/shuffleify` | Scoped to our subpath, not the whole apex domain. |
 | HttpOnly | yes | JavaScript cannot read it. |
 | Secure | yes in prod, no in dev | HTTPS-only in prod; dev is HTTP loopback. |
@@ -115,7 +115,7 @@ Lives in **one place**: `src/lib/spotify/auth.ts`. Every route handler that call
 Spotify **does not expose a token-revocation endpoint** (long-standing complaint, no fix as of 2026). Logout therefore:
 
 1. Server clears the session cookie (`Max-Age=0`).
-2. UI shows: "Logged out. **To fully revoke Shuffleify's access**, visit your Spotify [Apps page](https://www.spotify.com/account/apps/)." Link is mandatory — do not pretend logout fully revokes when it doesn't.
+2. UI shows: "Logged out. **To fully revoke shuffleify's access**, visit your Spotify [Apps page](https://www.spotify.com/account/apps/)." Link is mandatory — do not pretend logout fully revokes when it doesn't.
 3. The handoff cookie is also cleared on logout (defense-in-depth; it's normally ephemeral).
 
 ## HTTP security headers (Phase 3 deferred)
@@ -192,7 +192,7 @@ SESSION_PASSWORD=replace-me-with-openssl-rand-base64-64-output
 
 ## Portability notes
 
-Shuffleify v0 self-hosts behind a reverse proxy as an explicit stopgap; subsequent projects move to cloud hosting. The OAuth implementation is built to migrate with **zero code changes** — only the deployment target and the registered Spotify redirect URI change.
+shuffleify v0 self-hosts behind a reverse proxy as an explicit stopgap; subsequent projects move to cloud hosting. The OAuth implementation is built to migrate with **zero code changes** — only the deployment target and the registered Spotify redirect URI change.
 
 - **Web Crypto API** for SHA-256 hashing — runs on Node, Cloudflare Workers, Vercel Edge identically.
 - **`iron-session`** — same library across runtimes.
