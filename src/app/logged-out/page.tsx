@@ -33,7 +33,7 @@ export default function LoggedOut() {
             href="https://www.spotify.com/account/apps/"
             target="_blank"
             rel="noreferrer noopener"
-            className="underline transition-colors hover:text-zinc-100"
+            className="whitespace-nowrap underline transition-colors hover:text-zinc-100"
           >
             authorized apps list
           </a>{" "}
