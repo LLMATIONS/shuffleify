@@ -29,7 +29,7 @@ export default async function Home() {
           <form action="/shuffleify/api/auth/logout" method="post">
             <button
               type="submit"
-              className="rounded-full bg-[#e888c0] px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-[#f098c8]"
+              className="rounded-full bg-[#e888c0] px-8 py-3 text-base font-semibold text-black transition-colors hover:bg-[#f098c8]"
             >
               Log out
             </button>
