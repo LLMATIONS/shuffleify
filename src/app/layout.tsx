@@ -38,7 +38,35 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className="flex min-h-screen flex-col bg-zinc-950 text-zinc-100 antialiased">
+        {children}
+        <footer className="bg-zinc-950 px-8 pb-8 pt-4 text-center text-sm text-zinc-500">
+          <p>
+            <span className="font-semibold text-zinc-400">
+              Open source · AGPL-3.0
+            </span>{" "}
+            ·{" "}
+            <a
+              href="https://github.com/LLMATIONS/shuffleify"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-zinc-400 underline transition-colors hover:text-zinc-200"
+            >
+              GitHub →
+            </a>
+          </p>
+          <p className="mt-2">
+            Bug reports, kind words, weird ideas →{" "}
+            <a
+              href="mailto:will@swagcounty.com"
+              className="font-semibold text-zinc-300 underline transition-colors hover:text-zinc-100"
+            >
+              will@swagcounty.com
+            </a>
+          </p>
+          <p className="mt-2 italic">Built for the love of the game.</p>
+        </footer>
+      </body>
     </html>
   );
 }

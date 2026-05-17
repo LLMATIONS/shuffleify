@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function LoggedOut() {
   return (
-    <main className="grid min-h-screen place-items-center bg-zinc-950 p-8 text-zinc-100">
+    <main className="grid flex-1 place-items-center bg-zinc-950 p-8 text-zinc-100">
       <div className="flex flex-col items-center gap-6 text-center">
         <h1>
           {/* eslint-disable-next-line @next/next/no-img-element -- bypasses next/image basePath quirks in dev. */}
