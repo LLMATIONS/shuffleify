@@ -23,15 +23,17 @@ export default function LoggedOut() {
             className="h-64 w-64 sm:h-80 sm:w-80"
           />
         </h1>
-        <p className="max-w-md text-lg text-zinc-400">
-          You have been logged out of shuffleify.
+        <p className="max-w-lg text-balance text-xl font-medium text-zinc-300">
+          <strong className="font-bold text-[#e888c0]">
+            You have been logged out of shuffleify.
+          </strong>
           <br />
           Spotify still has shuffleify on your{" "}
           <a
             href="https://www.spotify.com/account/apps/"
             target="_blank"
             rel="noreferrer noopener"
-            className="underline transition-colors hover:text-zinc-200"
+            className="underline transition-colors hover:text-zinc-100"
           >
             authorized apps list
           </a>{" "}
@@ -39,7 +41,7 @@ export default function LoggedOut() {
         </p>
         <a
           href="/shuffleify/api/auth/login"
-          className="rounded-full bg-pink-500 px-8 py-3 text-base font-semibold text-black transition-colors hover:bg-pink-400"
+          className="rounded-full bg-[#e888c0] px-8 py-3 text-base font-semibold text-black transition-colors hover:bg-[#f098c8]"
         >
           Log in again
         </a>
