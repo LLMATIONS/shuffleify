@@ -24,7 +24,9 @@ export default function LoggedOut() {
           />
         </h1>
         <p className="max-w-md text-lg text-zinc-400">
-          You have been logged out of shuffleify. Spotify still has shuffleify on your{" "}
+          You have been logged out of shuffleify.
+          <br />
+          Spotify still has shuffleify on your{" "}
           <a
             href="https://www.spotify.com/account/apps/"
             target="_blank"
