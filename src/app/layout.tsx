@@ -58,10 +58,10 @@ export default function RootLayout({
           <p className="mt-2">
             Bug reports, kind words, weird ideas →{" "}
             <a
-              href="mailto:will@swagcounty.com"
+              href="mailto:nerds@swagcounty.com"
               className="font-semibold text-zinc-300 underline transition-colors hover:text-zinc-100"
             >
-              will@swagcounty.com
+              nerds@swagcounty.com
             </a>
           </p>
           <p className="mt-2 italic">Built for the love of the game.</p>
