@@ -17,10 +17,12 @@ export default async function Home() {
             className="h-64 w-64 sm:h-80 sm:w-80"
           />
         </h1>
-        <p className="max-w-md text-lg text-zinc-400">
-          Spotify sucks — everyone knows it.
+        <p className="max-w-md text-xl font-medium text-zinc-300">
+          <strong className="font-bold text-[#e888c0]">
+            Spotify&apos;s shuffle sucks — everybody knows it.
+          </strong>
           <br />
-          See what a real shuffle would look like.
+          Connect your account to see a real shuffle.
         </p>
 
         {isLoggedIn ? (
@@ -35,7 +37,7 @@ export default async function Home() {
         ) : (
           <a
             href="/shuffleify/api/auth/login"
-            className="rounded-full bg-pink-500 px-8 py-3 text-base font-semibold text-black transition-colors hover:bg-pink-400"
+            className="rounded-full bg-[#e888c0] px-8 py-3 text-base font-semibold text-black transition-colors hover:bg-[#f098c8]"
           >
             Log in with Spotify
           </a>
